@@ -27,7 +27,7 @@ const Sketch = ({sketch, inputs}) => {
     useEffect(() => {
         sketchInstance.current = createSketch(sketch, values);
         return () => {
-            sketchInstance.current.remove();
+           sketchInstance.current?.remove();
         }
     }, [sketch]);
 
