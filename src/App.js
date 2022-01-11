@@ -10,12 +10,14 @@ function App() {
 
     const [selectedModule, setSelectedModule] = useState(null);
     const defaultSketch = new LocalStorageSlice("Default sketch");
+    const [selectedSketchId, setSelectedSketchId] = useState(defaultSketch.get())
 
     const [ignored, forceUpdate] = useReducer(x => x + 1, 0);
 
     const setCurrentSketch = async (id) => {
         const module = await import(`./sketches/${id}.js`);
         setSelectedModule(() => module);
+        setSelectedSketchId(id);
     }
 
     useEffect(() => {
@@ -54,7 +56,7 @@ function App() {
                     }
                 </div>
                 <div className="grow grid place-items-center">
-                    <Sketch inputs={selectedModule?.inputs} sketch={selectedModule?.sketch}/>
+                    <Sketch inputs={selectedModule?.inputs} sketch={selectedModule?.sketch} sketchId={selectedSketchId}/>
                 </div>
             </main>
             <footer className="p-12 border-t-4 text-center">

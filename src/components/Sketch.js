@@ -3,14 +3,14 @@ import p5 from "p5";
 import Button from "./Button";
 import {useCachedState} from "../hooks/useCachedState";
 
-const id = "p5sketch";
+const containerId = "p5sketch";
 
 const createSketch = (sketch, values) => {
-    return sketch && new p5((editor) => sketch(editor, values), document.getElementById(id))
+    return sketch && new p5((editor) => sketch(editor, values), document.getElementById(containerId))
 }
 
-const Sketch = ({sketch, inputs}) => {
-    const [values, setValues] = useCachedState('sketchValues');
+const Sketch = ({sketch, inputs,sketchId}) => {
+    const [values, setValues] = useCachedState(`sketchValues-${sketchId}`);
     const sketchInstance = useRef(null);
 
     const onValueChange = (id, value) => {
@@ -54,7 +54,7 @@ const Sketch = ({sketch, inputs}) => {
                 ))}
                 { inputs && <Button onClick={runSketch}>Run</Button> }
             </div>
-            <div className="border-2 border-dashed p-4" id={id}>
+            <div className="border-2 border-dashed p-4" id={containerId}>
                 {!sketch && "No sketch selected"}
             </div>
         </div>

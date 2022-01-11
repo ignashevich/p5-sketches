@@ -10,13 +10,17 @@ export const sketch = (p5) => {
 
             system = new ParticleSystem(p5.createVector(p5.mouseX, p5.mouseY));
 
-            p5.createCanvas(720, 400);
+            p5.createCanvas(600, 600);
+
         }
 
         p5.draw = function draw() {
             p5.fill(255);
             p5.background(0);
             system.run();
+            p5.textSize(32);
+            p5.text('Move mouse here', 170, 30);
+            p5.fill(255);
 
         }
 
@@ -113,7 +117,7 @@ export const sketch = (p5) => {
         };
 
         ParticleSystem.prototype.addParticle = function(pos) {
-            for(let i = 0; i < 20; i++) {
+            for(let i = 0; i < 2; i++) {
                 this.particles.push(new Particle(pos || this.origin));
 
             }
