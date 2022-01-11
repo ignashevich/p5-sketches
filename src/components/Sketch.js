@@ -49,6 +49,7 @@ const Sketch = ({sketch, inputs}) => {
                             onChange={(event => onValueChange(input.id, event.target.value))}
                             type="text"
                         />
+                        <span>({input.type})</span>
                     </div>
                 ))}
                 { inputs && <Button onClick={runSketch}>Run</Button> }

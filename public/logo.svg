@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40">
+    <style>
+        .heavy { font: bold 14px sans-serif; }
+    </style>
+    <g fill="white">
+        <text x="4" y="18" class="heavy">p5S</text>
+    </g>
+</svg>

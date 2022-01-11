@@ -34,13 +34,13 @@ export const inputs = [
     {
         id: 'x',
         name: "f(x)",
-        type: "expression",
+        type: "js expression",
         default: "x"
     },
     {
         id: 'y',
         name: "f(y)",
-        type: "expression",
+        type: "js expression",
         default: "y"
     },
 ]
