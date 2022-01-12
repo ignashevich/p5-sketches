@@ -37,7 +37,7 @@ const Sketch = ({sketch, inputs,sketchId}) => {
     }
 
     return (
-        <div>
+        <div className="py-12">
             <div className="mb-12 space-y-3">
                 {inputs?.map((input) => (
                     <div className="space-x-3">

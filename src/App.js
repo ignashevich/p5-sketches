@@ -59,7 +59,7 @@ function App() {
                     <Sketch inputs={selectedModule?.inputs} sketch={selectedModule?.sketch} sketchId={selectedSketchId}/>
                 </div>
             </main>
-            <footer className="p-12 border-t-4 text-center">
+            <footer className="p-6 border-t-4 text-center">
                 <div>Aliaksandr Ihnashevich</div>
                 <a href="https://www.ignashevich.dev/">ignashevich.dev</a>
             </footer>
