@@ -56,7 +56,7 @@ function App() {
                     }
                 </div>
                 <div className="grow grid place-items-center">
-                    <Sketch inputs={selectedModule?.inputs} sketch={selectedModule?.sketch} sketchId={selectedSketchId}/>
+                    <Sketch key={selectedSketchId} inputs={selectedModule?.inputs} sketch={selectedModule?.sketch} sketchId={selectedSketchId}/>
                 </div>
             </main>
             <footer className="p-6 border-t-4 text-center">

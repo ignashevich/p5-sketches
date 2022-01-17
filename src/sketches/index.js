@@ -7,4 +7,8 @@ export const sketchesConfig = [
         id: 'rgb-particles',
         name: "Mouse following rgb particles ",
     },
+    {
+        id: 'floating-point',
+        name: "Floating point",
+    },
 ]
